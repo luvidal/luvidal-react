@@ -8,7 +8,7 @@ import { color } from './_common'
 // ---------------------------------------------------------------------------------------------------
 
 const Header = ({ style }) => 
-  <div style={{ ...style, flexDirection:'row', display:'flex', justifyContent:'space-between', padding:'1.5%', backgroundColor:color[0] }}>
+  <div style={{ ...style, flexDirection:'row', display:'flex', justifyContent:'space-between', padding:'1.5%', backgroundColor:'#330000' }}>
     <DeveloperInfo/>
     <ContactLinks/>
   </div>
@@ -26,10 +26,10 @@ const DeveloperInfo = () =>
 
 const ContactLinks = () =>
   <div style={{ display:'inline-block', flexDirection:'row' }}>
-    <a style={{ marginLeft:8, color:color.REACT }} target='_blank' rel='noreferrer' href='https://api.whatsapp.com/send?phone=56933846684&text=Hi%20Luis%2C%20I%27m%20looking%20for%20a%20dev'>
+    <a style={{ marginLeft:8, color:'white', opacity:0.2 }} target='_blank' rel='noreferrer' href='https://api.whatsapp.com/send?phone=56933846684&text=Hi%20Luis%2C%20I%27m%20looking%20for%20a%20dev'>
       <FontAwesomeIcon icon={ faWhatsapp } size='lg' />
     </a>
-    <a style={{ marginLeft:8, color:color.REACT }} target='_blank' rel='noreferrer' href='mailto:luvidal@edictus.com?subject=I%27m%20looking%20for%20a%20dev'>
+    <a style={{ marginLeft:8, color:'white', opacity:0.2 }} target='_blank' rel='noreferrer' href='mailto:luvidal@edictus.com?subject=I%27m%20looking%20for%20a%20dev'>
       <FontAwesomeIcon icon={ faEnvelope } size='lg'/>
     </a>
   </div>

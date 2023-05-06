@@ -3,53 +3,46 @@ import { Header, Body, GoTo, Skill } from './_common'
 const Page = () =>
 
 <div>
-    <Header title='Asistido' subtitle='Developer / Owner' favicon='asistido.png' start='2019' end=''/>
+    <Header title='Asistido' subtitle='Lead Developer / Product Manager' favicon='asistido.png' start='2019' end='2022'/>
     <Body>
-        <GoTo text='Asistido' url='https://asisti.do'/> is a React Native mobile app that optimizes your route to your next appointment based on your location. If you have an iPhone you can check Asistido in the <GoTo text='App Store' url={ url.apple }/>, or, if you have an Android device you can download it on <GoTo text='Google Play' url={ url.google }/>.<br/>
+        Using the GPS on your mobile device, <GoTo text='Asistido' url='https://asisti.do'/> optimizes your route/agenda. I created the entire <GoTo text='MVC' url={ url.apple }/> for the Web, <GoTo text='iPhone' url={ url.apple }/>, and <GoTo text='Android' url={ url.google }/> from the ground up. I also became the product manager as I oversaw its deployment in mobile stores.<br/>
         <ul>
-            <li>To ensure secure communication with the LAMP server, I signed the JWT keys with the HS256 algorithm and gave them extremely short lifespans to ensure frequent renewal.</li>
-            <li>I created server and mobile algorithms to reduce battery consumption while using GPS. On the server side, I created a pull-request that only activates the mobile sensors when they are required. And, in the case of the device's position, the mobile only responds when there is something relevant to inform; this means that the mobile remains dormant until it detects significant movement (through the Haversine Formula).</li>
-            <li>As users' privacy becomes more important, it gets harder to publish new apps in mobile stores. So, I need to figure out how to work with sensitive permissions on the Google and Apple platforms. To do this, I showed them that user information was kept, sent, and handled safely by using best practices, secure protocols, and hack-proof servers.</li>
+            <li>Sensitive Information: The user’s position, the contacts, and the calendar are sensitive information on Google and Apple platforms. I showed them that user information was kept, sent, and handled safely by using best practices, secure protocols, and hack-proof servers.</li>
+            <li>Optimized Communications: I came up with a server algorithm in which the mobile location was only requested when the distance and/or speed demanded it. This cut traffic communications by 87.21%.</li>
+            <li>Battery Optimization: I devised another algorithm for the mobile in which the GPS remained dormant until it detects significant distance or speed (through the Haversine Formula). It's difficult to say with certainty, but the battery life nearly doubled after this improvement.</li>
+            <li>Secure Communications: To ensure secure communication with the server, I signed the JWT keys with the HS256 algorithm and gave them extremely short lifespans to ensure frequent renewal.</li>
         </ul>
         <br/>
-        <Skill txt='React-Native'/><Skill txt='TypeScript'/><Skill txt='UI/UX Design'/>
+        <br/>
+        <Skill txt='React-Native'/><Skill txt='TypeScript'/><Skill txt='React'/><Skill txt='Laravel'/><Skill txt='Maps API'/>
     </Body>
     <Header title='LoTops CRM' subtitle='Lead Developer' favicon='lotops.png' start='2017' end='2019'/>
     <Body>
-        LoTops is a CRM for the real estate industry. It has recently evolved into a Project Management Software<br/>
+        This is a <GoTo text='SPA' url={ url.spa } /> with lots of features designed to give the end user a swift and pleasant experience. This was my first experience as a lone wolf, and while I missed the debates and second opinions, it was a significant boost to my developer's skills.<br/>
         <ul>
-            <li>I was instructed to design the entire application, including the software architecture, the database structure and frontend user interface. At first, an MVP was needed, but the idea wasn't fully formed, so I helped the client design the interface with the help of mockups in Balsamiq.</li>
-            <li>Many API integrations with Google and Microsoft, like Maps, Office, and Gmail, made them worried about security. I was able to put their minds at ease by hiring ethical hackers to prove that our infrastructure was safe.</li>
-            <li>At the time, I didn't know how to develop for mobile platforms, so I had to think outside the box: After some research I was able wrap it in a Phonegap/Cordova app and successfully deploy the to the mobile stores.</li>
+            <li>Server Security: Our integrations with Microsoft raised some concerns about how we handled that sensitive information security. So we hired <GoTo text='Ethical Hackers' url={ url.ceh }/> to test the security of all our infrastructure. Although some suggestions were made, we were to demonstrate the robustness of our architecture.</li>
+            <li>Gmail API Tokens: When a user gives you access to his or her Gmail, you need to store a token on your servers and Google makes sure that you keep them safe. So I used <GoTo text='AWS KMS' url={ url.kms }/> to encrypt them. So they finally gave their approval.</li>
+            <li>Mobile Wrapper: I didn't know how to develop for mobile platforms at the time, so after some thought and research, I came up with a simple and quick solution, wrapped it in a <GoTo text='Cordova' url='https://cordova.apache.org/'/> (aka Phonegap) app, and successfully deployed it in the mobile stores.</li>
         </ul>
         <br/>
-        <Skill txt='AWS'/><Skill txt='LAMP'/><Skill txt='Stripe'/><Skill txt='Maps API'/><Skill txt='Mailchimp API'/>
+        <br/>
+        <Skill txt='Stripe API'/><Skill txt='Gmail API'/><Skill txt='MS Graph API'/><Skill txt='Mailchimp API'/><Skill txt='AWS'/><Skill txt='LAMP'/>
     </Body>
-    <Header title='LVA Indices' subtitle='Lead Developer' favicon='lvaindices.png' start='2005' end='2015'/>
+    <Header title='Fintechs Period' subtitle='Chief Technology Officer' favicon='fintech.png' start='2000' end='2015'/>
     <Body>
-        LVA Indices is a fintech that summarizes large quantities of information as fixed income indexes. LVA is today a leading fintech company in Latin America, and it makes me extremely proud to have been a part of its founding. If you want to know more <GoTo text='follow this link' url='http://lvaindices.com'/>.
+        In my early career, I worked as a CTO on very similar fintech startups. I used to manage small teams of three to ten engineers, mathematicians, and developers. Nowadays, those projects are all leading companies in Latin America, and I am extremely proud to have played a role in their formation.<br/>
+        <br/>
+        Some of these startups include <GoTo text='LVAindices' url={ url.lva }/> (10 yrs), <GoTo text='RiskAmerica' url={ url.ra }/> (2 yrs) and <GoTo text='PortalInmobiliario' url={ url.portal }/> (2 yrs).<br/>
         <ul>
-            <li>As some mortgage bonds are extremely complicated and do not adhere to a certain rule, storing and calculating them presents a formidable issue. I overcame this obstacle by rigorously optimizing its code and tuning the databases to maximize the performance of our servers.</li>
-            <li>The enormous volumes of data involved in an index posed a problem for the bandwidths our applications required as well. Traders require extremely precise real-time numbers, which I was able to reduce and give using data lossless compression.</li>
+            <li>Leadership: On a daily basis, I lead my team members in a high-stress environment to develop new products for a demanding market such as the financial sector. But I managed to always meet the deadlines while keeping their spirits up.</li>
+            <li>CPU Optimization: Bond Prices are computed using Kalman Filtering LQE, which consumes significant CPU resources, so in order to calculate them in real-time applications, I was able to encapsulate a highly fast but low-level algorithm in a DLL package.</li>
+            <li>Interactive UI: Traders are accustomed to the Bloomberg platform's desktop application. Consequently, to advertise our web solution, I simulated this interface on a web-based platform with a high-end UI and charts created with <GoTo text='FusionCharts' url='https://fusioncharts.com/'/>.</li>
+            <li>DB Tuning: Calculating indices for mortgage bonds with 20K or more liens is difficult because they are all unique data structures that follow no set rules. This operation used to take 2.5 hours each day, but after optimizing and tuning the database, I was able to cut that time down to only 22 minutes! (6-7 times faster).</li>
+            <li>Lean bandwidth: The enormous volumes of data involved in a financial index posed a problem for the bandwidths required by our applications. Traders require extremely precise real-time numbers, which I was able to reduce and give using lossless compression.</li>
         </ul>
         <br/>
-        <Skill txt='MS-SQL'/><Skill txt='ASP'/><Skill txt='jQuery'/><Skill txt='HTML5'/><Skill txt='CSS3'/><Skill txt='Jira'/>
-    </Body>
-    <Header title='RiskAmerica' subtitle='Lead Developer' favicon='riskamerica.png' start='2003' end='2005'/>
-    <Body>
-        RiskAmerica is a financial technology company that calculates the pricing of fixed-income bonds in low-frequency transaction markets. It has been providing bond prices for the Chilean market daily for over two decades. For additional information, please visit <GoTo text='RiskAmerica' url='http://riskamerica.com'/>.
-        <ul>
-            <li>Bond Prices are computed using Kalman Filtering LQE, which consumes significant CPU resources, so in order to calculate them in real-time applications, I was able to encapsulate a highly fast but low-level algorithm in a DLL package.</li>
-            <li>Traders are accustomed to the Bloomberg platform's desktop application. Consequently, to advertise our web solution, I simulated this interface on a web-based platform with a high-end UI and charts created with <GoTo text='FusionCharts' url='https://fusioncharts.com/'/>.</li>
-        </ul>
-    </Body>
-    <Header title='Portalinmobiliario' subtitle='Lead Developer' favicon='portalinmobiliario.png' start='1999' end='2002'/>
-    <Body>
-        PortalInmobiliario is the premier real estate website for seeking a new home in Chile. In 2014, <GoTo text='MercadoLibre' url='http://mercadolibre.com' /> (a large Mexican corporation) acquired this website for $40 million. Visit <GoTo text='PortalInmobliario' url='http://portalinmobiliario.com'/> for more information.
-        <ul>
-            <li>The company initially contacted me because their security had been compromised. So, with the assistance of a coworker, an OpenBSD firewall and numerous other security measures were deployed.</li>
-            <li>In the early 2000s, bandwidth was a significant concern for websites, thus they had to be lightweight. But the entire site was created with Microsoft FrontPage, and the pages generated by this application were extremely heavy, so I used my HTML and JS (CSS didn't exist) expertise to reduce their weight. Even now, when I need to send a lot of data over the network, I still use this knowledge and experience.</li>
-        </ul>
+        <br/>
+        <Skill txt='MS-SQL'/><Skill txt='DB Tuning'/><Skill txt='jQuery'/><Skill txt='HTML5'/><Skill txt='CSS3'/><Skill txt='Jira'/>
     </Body>
 </div>
 
@@ -59,4 +52,12 @@ const url =
 {
     apple    : 'https://apps.apple.com/us/app/asistido/id1569243870',
     google   : 'https://play.google.com/store/apps/details?id=com.edictus.asistido&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1',
+    spa      : 'https://en.wikipedia.org/wiki/Single-page_application',
+    ceh      : 'https://en.wikipedia.org/wiki/Certified_Ethical_Hacker',
+    mvc      : 'https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller',
+    lva      : 'https://lvaindices.com',
+    ra       : 'https://riskamerica.com',
+    portal   : 'https://portalinmobiliario.com',
+    scandal  : 'https://www.nytimes.com/2018/04/04/us/politics/cambridge-analytica-scandal-fallout.html',
+    kms      : 'https://aws.amazon.com/kms/',
 }

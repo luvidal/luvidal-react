@@ -6,19 +6,19 @@ const Page = () =>
     <Body>
         Under the guidance of <GoTo text='Prof. Nussbaum' url={ url.miguel }/>, my thesis focused on educational collaborative software. It was a multidisciplinary effort involving groups of psychologists, educators, and engineers.<br/>
         <br/>
-        Using Mobile Devices such as <GoTo text='Pocket PCs' url={ url.pocket }/>, I was instructed to develop a math-learning game for children. We intended to use Bluetooth for their communications, but it was unreliable at the time, so Wi-Fi was used instead.<br/>
+        Using mobile devices such as <GoTo text='Pocket PCs' url={ url.pocket }/>, I was instructed to develop a math-learning game for children. We intended to use Bluetooth for their communications, but it was unreliable at the time, so Wi-Fi was used instead.<br/>
     </Body>
     <Header title='Industrial Engineer' subtitle='Pontificia Universidad Católica' favicon='puc.png' start='1994' end='2000' certificate='engineer.jpeg'/> 
     <Body>
-        My university is very strict and demanding, and <GoTo text='it is ranked first' url={ url.topone }/> in Latin America as of 2022. Furthermore, six years of study are required for Industrial Engineering. During that time, I worked as an assistant to <GoTo text='Prof. Eterovic' url={ url.yadran }/>. I eventually became a professor and taught the <GoTo text='Data Structures' url={ url.dtstrc }/> course.
+        My university is very strict and demanding, and <GoTo text='it is ranked first' url={ url.topone }/> in Latin America as of 2022. Furthermore, six years of study are required for industrial engineering. During that time, I worked as an assistant to <GoTo text='Prof. Eterovic' url={ url.yadran }/>. I eventually became a professor and taught the <GoTo text='data structures' url={ url.dtstrc }/> course.
     </Body>
     <Header title='Computer Science Minor' subtitle='Pontificia Universidad Católica' favicon='puc.png' start='1994' end='2000' certificate='minorcomputersc.jpeg'/> 
     <Body>
-        After concentrating my curriculum on all the computer subjects that had peaked my attention ever since I was very young, I finished a minor in computer science.<br/> 
+        After concentrating my curriculum on all the computer subjects that had peaked my attention ever since I was very young, I completed a minor in computer science.<br/> 
     </Body>
     <Header title='Bachelor in Science' subtitle='Pontificia Universidad Católica' favicon='puc.png' start='1994' end='1997' certificate=''/> 
     <Body>
-        This Bachelor's degree is part of my university's engineering program. It covers topics such as physics, chemistry, and advanced mathematics.
+        This bachelor's degree is part of my university's engineering program. It covers topics such as physics, chemistry, and advanced mathematics.
     </Body>
 
     <Separator/>
@@ -41,7 +41,7 @@ const Page = () =>
     <Header title='Risk Management Seminar' subtitle='PhD Gonzalo Cortazar S.' favicon='dictuc.jpg' start='2003' end='2003' certificate='riskmanagement.jpeg'/>
     <Body>
         I have some experience working on fintechs, and I decided to attend this conference in order to better understand risk in the financial industry.
-        In finance, risk refers to the degree of uncertainty and/or potential financial loss inherent in an investment decision. In general, as investment risks rise, investors seek higher returns to compensate themselves for taking such risks.<br/>
+        In finance, "risk" refers to the degree of uncertainty and/or potential financial loss inherent in an investment decision. In general, as investment risks rise, investors seek higher returns to compensate themselves for taking such risks.<br/>
     </Body>
 </div>
 

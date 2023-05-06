@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { color, portrait, menu } from './_common'
+import { color, portrait, menu, ReactIco } from './_common'
 
 // ---------------------------------------------------------------------------------------------------
 
@@ -30,7 +30,7 @@ const Main = ({ style }) =>
     setContent(content)
   }
 
-  const menucss = { display:'flex', flexShrink:0, flexDirection:portrait('row', 'column'), paddingLeft:portrait('4%', 0) }
+  const menucss = { display:'flex', flexShrink:0, flexDirection:portrait('row', 'column'), paddingLeft:portrait('4%', '1%'), paddingTop:portrait(0, '2%') }
   const contcss = { display:'flex', flexShrink:1, height:'100%' }
 
   return (
@@ -45,28 +45,35 @@ export default Main;
 // ---------------------------------------------------------------------------------------------------
 
 const Menu = ({ selected, onSelect, style }) => 
-  <div style={{ ...style, backgroundColor:color[2] }}>
-  {  menu.map((item, i) => MenuButton(item, i, selected, onSelect)) }
+  <div style={{ ...style, backgroundColor:color[1] }}>
+    {  menu.map((item, i) => MenuButton(item, i, selected, onSelect)) }
+    { portrait(null, <ReactLogo/>) }
   </div>
 
 const MenuButton = (item, i, selected, onSelect) => 
 {
-  const back = selected === item.id ? 'darkred' : 'transparent'
-  const fore = selected === item.id ? 'white'   : color.A
+  const back = selected === item.id ? color[4] : 'transparent'
+  const fore = selected === item.id ? 'white'  : color.A
 
-  const buttoncss = { display:'flex', flexDirection:'column', alignItems:'center', padding:portrait(16, 25), margin:portrait(10, 15), backgroundColor:back, color:fore, borderRadius:10 }
+  const buttoncss = { display:'flex', flexDirection:'column', alignItems:'center', padding:portrait(16, 30), backgroundColor:back, color:fore, borderTopLeftRadius:portrait(0, 6), borderBottomLeftRadius:portrait(0, 6) }
 
   return (
     <a href='#' key={ i } style={ buttoncss } onClick={ () => onSelect(item.id) }>
       <FontAwesomeIcon icon={ item.icon } size='xl' />
-      <span style={{ display:portrait('none', 'flex'), marginTop:16, fontSize:'80%' }}>{ item.text }</span>
+      <span style={{ display:portrait('none', 'flex'), marginTop:15, fontSize:'70%' }}>{ item.text }</span>
     </a>)
 }
+
+const ReactLogo = () =>
+  <a href='https://reactjs.org/' style={{ display:'flex', justifyContent:'center', alignItems:'center', marginTop:'auto', marginBottom:10, paddingRight:15 }}>
+    <ReactIco size={ 35 }/>
+    <span style={{ color:color.REACT, marginLeft:-5 }}>React</span>
+  </a>  
 
 // ---------------------------------------------------------------------------------------------------
 
 const Content = ({ content, style }) =>
-  <div style={{ ...style, backgroundColor:color[3], width:'100%', flexDirection:'column' }}>
+  <div style={{ ...style, backgroundColor:color[4], width:'100%', flexDirection:'column' }}>
     <Updated/>
     <div style={{ width:'100%', display:'flex', justifyContent:'center', overflow:'auto' }}>
       <div style={{ width:portrait('90%','60%') }}>
