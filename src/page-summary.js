@@ -1,4 +1,4 @@
-import { Header, Body, GoTo } from './_common'
+import { Header, Body } from './_common'
 
 const Page = () =>
 

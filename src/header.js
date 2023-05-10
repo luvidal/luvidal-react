@@ -3,7 +3,6 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 import mypic from './assets/dev-round.png'
-import { color } from './_common'
 
 // ---------------------------------------------------------------------------------------------------
 

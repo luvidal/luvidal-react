@@ -31,7 +31,7 @@ export const portrait = (d1, d2) => (window.innerHeight > window.innerWidth) ? d
 
 const Title = ({ title, subtitle, favicon }) =>
   <div style={{ display:'flex', flexDirection:'row', alignItems:'center' }}>
-      <img src={ require('./assets/favicons/' + favicon) } style={{ width:46, height:46, borderRadius:46, marginRight:12 }} />
+      <img alt={ title } src={ require('./assets/favicons/' + favicon) } style={{ width:46, height:46, borderRadius:46, marginRight:12 }} />
       <div>
         <div style={{ display:'flex', textAlign:'left', fontSize:'120%', whiteSpace:'nowrap', opacity:1.0, marginBottom:2 }}>{ title }</div>
         <div style={{ display:'flex', textAlign:'left', fontSize:'108%', whiteSpace:'nowrap', opacity:0.6 }}>{ subtitle }</div>
@@ -42,7 +42,7 @@ const RevTitle = ({ title, subtitle, flag }) =>
   <div style={{ display:'flex', flexDirection:'column' }}>
     <div style={{ display:'flex', textAlign:'left', fontSize:'110%', whiteSpace:'nowrap', opacity:1.0, marginBottom:2 }}>{ title }</div>
     <div style={{ display:'flex', flexDirection:'row' }}>
-      <img src={ require('./assets/flags/' + flag + '.svg') } style={{ width:23, height:23, marginRight:9 }} />
+      <img  alt={ title } src={ require('./assets/flags/' + flag + '.svg') } style={{ width:23, height:23, marginRight:9 }} />
       <div style={{ display:'flex', textAlign:'left', fontSize:'105%', whiteSpace:'nowrap', opacity:0.6 }}>{ subtitle }</div>
     </div>
   </div>
@@ -151,7 +151,7 @@ const Certificate = ({ text = 'Certificate', file }) =>
 
   const [showModal, hideModal] = useModal(() => file ? (
     <ReactModal isOpen style={ style } onRequestClose={ hideModal }>
-        <img src={ require('./assets/certificates/' + file) } style={{ width:'100%', heigth:'100%' }} onClick={ hideModal }/>
+        <img alt={ file }  src={ require('./assets/certificates/' + file) } style={{ width:'100%', heigth:'100%' }} onClick={ hideModal }/>
     </ReactModal>
   ) : null)
 
