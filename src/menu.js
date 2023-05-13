@@ -13,8 +13,13 @@ const MenuButton = (item, i, selected, onSelect) =>
   const fore = selected === item.id ? 'white'  : color.A
   const glow = selected === item.id ? 1 : 0
 
-  const btnaux = { display:'flex', flexDirection:'column', alignItems:'center', padding:portrait(16, 30), backgroundColor:back, color:fore, borderTopRightRadius:0, borderBottomRightRadius:0, marginRight:-2 }
-  const btncss = { ...threedee('#444', '#222', glow), ...btnaux }
+  const btnaux = { display:'flex', flexDirection:'column', alignItems:'center', padding:portrait(12, 30), backgroundColor:back, color:fore }
+  
+  const borderLeft = { borderTopRightRadius:0, borderBottomRightRadius:0, marginRight:-2 }
+  const borderTop  = { borderBottomLeftRadius:0, borderBottomRightRadius:0, marginTop:10 }
+  const borderResp = portrait(borderTop, borderLeft)
+
+  const btncss = { ...threedee('#444', '#222', glow), ...borderResp, ...btnaux }
 
   return (
     <a href='#' key={ i } style={ btncss } onClick={ () => onSelect(item.id) }>

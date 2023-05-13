@@ -1,9 +1,9 @@
-import { Header, Body, GoTo, Skill } from './_common'
+import { Header, Body, GoTo, Skill, portrait } from './_common'
 
 const Page = () =>
 
 <div>
-    <Header title='Asistido' subtitle='Lead Developer / Product Manager' favicon='asistido.png' start='2019' end='2022'/>
+    <Header title='Asistido' subtitle={ portrait('Product Manager', 'Lead Developer / Product Manager') } favicon='asistido.png' start='2019' end='2022'/>
     <Body>
         Using the GPS on your mobile device, <GoTo text='Asistido' url='https://asisti.do'/> optimizes your route/agenda. I created the entire <GoTo text='MVC' url={ url.apple }/> for the Web, <GoTo text='iPhone' url={ url.apple }/>, and <GoTo text='Android' url={ url.google }/> from the ground up. I also became the product manager as I oversaw its deployment in mobile stores.<br/>
         <ul>

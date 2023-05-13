@@ -35,10 +35,10 @@ export const threedee = (light, dark, width = 1) =>
 
 const Title = ({ title, subtitle, favicon }) =>
   <div style={{ display:'flex', flexDirection:'row', alignItems:'center' }}>
-      <img alt={ title } src={ require('./assets/favicons/' + favicon) } style={{ width:46, height:46, borderRadius:46, marginRight:12 }} />
+      <img alt={ title } src={ require('./assets/favicons/' + favicon) } style={{ width:portrait(30, 40), height:portrait(30, 40), borderRadius:portrait(30, 40), marginRight:12 }} />
       <div>
-        <div style={{ display:'flex', textAlign:'left', fontSize:'120%', whiteSpace:'nowrap', opacity:1.0, marginBottom:2 }}>{ title }</div>
-        <div style={{ display:'flex', textAlign:'left', fontSize:'108%', whiteSpace:'nowrap', opacity:0.6 }}>{ subtitle }</div>
+        <div style={{ display:'flex', textAlign:'left', fontSize:'114%', whiteSpace:'nowrap', opacity:1.0, marginBottom:2 }}>{ title }</div>
+        <div style={{ display:'flex', textAlign:'left', fontSize:'100%', whiteSpace:'nowrap', opacity:0.6 }}>{ subtitle }</div>
       </div>
   </div>
 
@@ -63,13 +63,12 @@ const OnDate = ({ onedate }) => onedate ?
 
 // ---------------------------------------------------------------------------------------------------
 
-const padding = '1.5%'
-
-const headeraux = { display:'flex', flexDirection:'row', justifyContent:'space-between', padding, marginTop:'4%', backgroundColor:color.A }
-const headercss = { ...threedee('#444', '#111'), ...headeraux }
+const padding = '2%'
+const hdraux = { display:'flex', flexDirection:'row', justifyContent:'space-between', padding, marginTop:'4%', backgroundColor:color.A }
+const hdrcss = { ...threedee('#444', '#111'), ...hdraux }
 
 export const Header = ({ title, subtitle = '', favicon, start, end, certificate, checkout }) =>
-    <div style={ headercss }>
+    <div style={ hdrcss }>
         <Title title={ title } subtitle={ subtitle } favicon={ favicon }/>
         <div style={{ textAlign:'right' }}>
             <Between start={ start } end={ end } />
@@ -79,7 +78,7 @@ export const Header = ({ title, subtitle = '', favicon, start, end, certificate,
     </div>
 
 export const RevHeader = ({ title, subtitle, flag, onedate }) =>
-    <div style={ headercss }>
+    <div style={ hdrcss }>
         <RevTitle title={ title } subtitle={ subtitle } flag={ flag }/>
         <div style={{ textAlign:'right' }}>
             <OnDate onedate={ onedate } />

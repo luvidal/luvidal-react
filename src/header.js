@@ -3,11 +3,14 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 
 import mypic from './assets/dev-round.png'
+import { threedee, portrait } from './_common'
 
 // ---------------------------------------------------------------------------------------------------
 
+const headercss = {flexDirection:'row', display:'flex', justifyContent:'space-between', padding:portrait('3%', '1.5%'), backgroundColor:'#330000', borderRadius:0 }
+
 const Header = ({ style }) => 
-  <div style={{ ...style, flexDirection:'row', display:'flex', justifyContent:'space-between', padding:'1.5%', backgroundColor:'#330000', borderBottomWidth:1, borderBottomColor:'#000', borderBottomStyle:'solid' }}>
+  <div style={{ ...threedee('#322', '#100', 1), ...headercss, ...style }}>
     <DeveloperInfo/>
     <ContactLinks/>
   </div>
@@ -16,10 +19,10 @@ export default Header;
 
 const DeveloperInfo = () =>
   <div style={{ display:'flex', flexDirection:'row' }}>
-    <img src={ mypic } width='60' height='60' alt='Luis Vidal DB'/>
+    <img src={ mypic } width={ portrait('40', '60') } height={ portrait('40', '60') } alt='Luis Vidal DB'/>
     <div style={{ display:'flex', flexDirection:'column', marginLeft:'3%'}}>
       <div style={{ fontSize:'150%', whiteSpace:'nowrap', opacity:0.9 }}>Luis Vidal DB</div>
-      <div style={{ fontSize:'105%', whiteSpace:'nowrap', opacity:0.5 }}>Web & Mobile Developer</div>
+      <div style={{ fontSize:'105%', whiteSpace:'nowrap', opacity:0.5 }}>Full-Stack Engineer</div>
     </div>
   </div>
 

@@ -2,9 +2,6 @@ import { RevHeader, Body } from './_common'
 
 const Page = () =>
 <div>
-    {/* <Body>
-        These are the testimonials I received while working on a platform for freelancers from 2016 to 2018. The site allowed clients to rate the developer and his work, and I am extremely proud to say that I always received five stars out of five. Please do not hesitate to verify these claims on your own by following the link to the website.
-    </Body> */}
     {  shuffle(reviews).map((item, i) => Review(item, i)) }
 </div>
 
@@ -18,7 +15,7 @@ const Review = (item, i) =>
         <div key={ i }>
             <RevHeader title={ client.name } subtitle={ client.city } flag={ client.country } onedate={ item.date }/>
             <Body>
-                <div style={{ fontStyle:'italic', fontSize:'120%', marginBottom:'4%' }}>"{ item.text }"</div>
+                <div style={{ fontStyle:'italic', marginBottom:'4%' }}>"{ item.text }"</div>
             </Body>
         </div>)
 }

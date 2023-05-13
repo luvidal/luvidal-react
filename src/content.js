@@ -12,7 +12,7 @@ const contentCss = { display:'flex', flexShrink:1, height:'100%', backgroundColo
 const styles = StyleSheet.create(
 {
   fadeIn :{ animationName:fadeIn,  animationDuration:'3s' },
-  fadeOut:{ animationName:fadeOut, animationDuration:'1s' }
+  fadeOut:{ animationName:fadeOut, animationDuration:'1s' },
 });
 
 export const Content = ({ selected }) => 

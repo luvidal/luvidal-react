@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 
 import { Menu } from './menu'
 import { Content } from './content'
-
 import { menu } from './_common'
 
 // ---------------------------------------------------------------------------------------------------
@@ -33,10 +32,10 @@ const Main = ({ style }) =>
   }
 
   return selected ? (
-  <div style={ style }>
-    <Menu selected={ selected } onSelect={ onSelect }/>
-    <Content selected={ selected }/>
-  </div>) :  null
+    <div style={ style }>
+      <Menu selected={ selected } onSelect={ onSelect }/>
+      <Content selected={ selected }/>
+    </div>) :  null
 }
 
 export default Main;
