@@ -4,7 +4,7 @@ import { StyleSheet, css } from 'aphrodite'
 //import { lightSpeedIn as fadein, lightSpeedOut as fadeout } from 'react-animations'
 //import { rollIn as fadein, rollOut as fadeout } from 'react-animations'
 //import { rotateIn as fadein, rotateOut as fadeout } from 'react-animations'
-import { slideInDown as fadein, slideOutUp as fadeout } from 'react-animations'
+import { slideInDown as fadein, slideOutDown as fadeout } from 'react-animations'
 
 import { color, portrait, menu, timeout } from './_common'
 
