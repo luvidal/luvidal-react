@@ -10,7 +10,7 @@ import History from './page-history'
 import Education from './page-education'
 import Links from './page-links'
 import Reviews from './page-reviews'
-import Hobbies from './page-hobbies'
+// import Hobbies from './page-hobbies'
 
 export const menu =
 [
@@ -20,12 +20,16 @@ export const menu =
   { id:'education', text:'Education', icon:solid('graduation-cap'), content:Education },
   { id:'links',   text:'Links', icon:solid('globe'), content:Links },
   { id:'reviews', text:'Reviews', icon:solid('comment-dots'), content:Reviews },
-  { id:'hobbies', text:'Hobbies', icon:solid('masks-theater'), content:Hobbies },
+  // { id:'hobbies', text:'Hobbies', icon:solid('masks-theater'), content:Hobbies },
 ]
 
-export const color = { LINK:'#61DAFB', REACT:'#61DAFB', 0:'#060606', 1:'#0C0C0C', 2:'#131313', 3:'#191919', 4:'#1F1F1F', 5:'#252525', 6:'#2B2B2B', 7:'#323232', 8:'#373737', 9:'#3D3D3D', A:'#333', B:'#555' }
-
 export const portrait = (d1, d2) => (window.innerHeight > window.innerWidth) ? d1 : d2
+export const color    = { LINK:'#61DAFB', REACT:'#61DAFB', 0:'#060606', 1:'#0C0C0C', 2:'#131313', 3:'#191919', 4:'#1F1F1F', 5:'#252525', 6:'#2B2B2B', 7:'#323232', 8:'#373737', 9:'#3D3D3D', A:'#333', B:'#555' }
+
+export const threedee = (light, dark, width = 1) =>
+{ 
+  return { borderWidth:width, borderStyle:'solid', borderLeftColor:light, borderTopColor:light, borderBottomColor:dark, borderRightColor:dark, borderRadius:9 }
+}
 
 // ---------------------------------------------------------------------------------------------------
 
@@ -61,8 +65,11 @@ const OnDate = ({ onedate }) => onedate ?
 
 const padding = '1.5%'
 
+const headeraux = { display:'flex', flexDirection:'row', justifyContent:'space-between', padding, marginTop:'4%', backgroundColor:color.A }
+const headercss = { ...threedee('#444', '#111'), ...headeraux }
+
 export const Header = ({ title, subtitle = '', favicon, start, end, certificate, checkout }) =>
-    <div style={{ display:'flex', flexDirection:'row', justifyContent:'space-between', padding, marginTop:'4%', background:color.A, borderRadius:10 }}>
+    <div style={ headercss }>
         <Title title={ title } subtitle={ subtitle } favicon={ favicon }/>
         <div style={{ textAlign:'right' }}>
             <Between start={ start } end={ end } />
@@ -72,7 +79,7 @@ export const Header = ({ title, subtitle = '', favicon, start, end, certificate,
     </div>
 
 export const RevHeader = ({ title, subtitle, flag, onedate }) =>
-    <div style={{ display:'flex', flexDirection:'row', justifyContent:'space-between', padding, marginTop:'4%', background:color.A, borderRadius:10 }}>
+    <div style={ headercss }>
         <RevTitle title={ title } subtitle={ subtitle } flag={ flag }/>
         <div style={{ textAlign:'right' }}>
             <OnDate onedate={ onedate } />
@@ -85,9 +92,10 @@ export const Body = ({ children }) =>
         { children }
     </div>
 
+const skillcss = { backgroundColor:color.REACT, color:'black', opacity:0.7, borderRadius:100, fontSize:'75%', marginRight:'1%', paddingLeft:'2%', paddingRight:'2%', paddingTop:'1%', paddingBottom:'1%' }
 
 export const Skill = ({ txt }) =>
-    <span style={{ whiteSpace:'nowrap', backgroundColor:'grey', color:'white', borderRadius:100, fontSize:'90%', marginRight:'1%', paddingLeft:'2%', paddingRight:'2%', paddingTop:'1%', paddingBottom:'1%' }}>
+    <span style={ skillcss }>
         { txt }
     </span>
 
@@ -163,7 +171,6 @@ const Certificate = ({ text = 'Certificate', file }) =>
 } 
 
 ReactModal.setAppElement('#modal');
-
 
 export const ReactIco = ({ size }) =>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3" width={ size } height={ size }>

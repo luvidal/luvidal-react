@@ -7,7 +7,7 @@ import mypic from './assets/dev-round.png'
 // ---------------------------------------------------------------------------------------------------
 
 const Header = ({ style }) => 
-  <div style={{ ...style, flexDirection:'row', display:'flex', justifyContent:'space-between', padding:'1.5%', backgroundColor:'#330000' }}>
+  <div style={{ ...style, flexDirection:'row', display:'flex', justifyContent:'space-between', padding:'1.5%', backgroundColor:'#330000', borderBottomWidth:1, borderBottomColor:'#000', borderBottomStyle:'solid' }}>
     <DeveloperInfo/>
     <ContactLinks/>
   </div>
