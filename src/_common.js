@@ -31,6 +31,10 @@ export const threedee = (light, dark, width = 1) =>
   return { borderWidth:width, borderStyle:'solid', borderLeftColor:light, borderTopColor:light, borderBottomColor:dark, borderRightColor:dark, borderRadius:9 }
 }
 
+export function timeout(delay) {
+  return new Promise( res => setTimeout(res, delay) );
+}
+
 // ---------------------------------------------------------------------------------------------------
 
 const Title = ({ title, subtitle, favicon }) =>
