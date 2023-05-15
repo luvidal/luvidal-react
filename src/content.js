@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 
 import { StyleSheet, css } from 'aphrodite'
+
+//https://formidable.com/open-source/react-animations/
 //import { lightSpeedIn as fadein, lightSpeedOut as fadeout } from 'react-animations'
 //import { rollIn as fadein, rollOut as fadeout } from 'react-animations'
 //import { rotateIn as fadein, rotateOut as fadeout } from 'react-animations'
@@ -57,5 +59,5 @@ const ContentComponent = ({ content, className }) =>
 const Updated = () =>
   <div style={{ marginTop:15, alignSelf:'flex-end' }}>
     <span style={{ opacity:0.2, marginRight:10 }}>Last updated on</span>
-    <span style={{ opacity:0.5, marginRight:30 }}>Dec 02, 2022</span>
+    <span style={{ opacity:0.5, marginRight:30 }}>May 02, 2023</span>
   </div>

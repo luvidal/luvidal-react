@@ -1,5 +1,5 @@
-import ReactModal from "react-modal";
-import { useModal } from "react-modal-hook";
+import ReactModal from 'react-modal'
+import { useModal } from 'react-modal-hook'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
@@ -14,19 +14,19 @@ import Reviews from './page-reviews'
 
 export const menu =
 [
-  { id:'summary', text:'Summary', icon:solid('screwdriver-wrench'), content:Summary },
+  { id:'summary', text:'Summary', icon:solid('scroll'), content:Summary },
   { id:'portfolio', text:'Portfolio', icon:solid('briefcase'), content:Portfolio },
   { id:'history', text:'History', icon:solid('book'), content:History },
   { id:'education', text:'Education', icon:solid('graduation-cap'), content:Education },
   { id:'links',   text:'Links', icon:solid('globe'), content:Links },
-  { id:'reviews', text:'Reviews', icon:solid('comment-dots'), content:Reviews },
+  { id:'reviews', text:'Reviews', icon:solid('message'), content:Reviews },
   // { id:'hobbies', text:'Hobbies', icon:solid('masks-theater'), content:Hobbies },
 ]
 
 export const portrait = (d1, d2) => (window.innerHeight > window.innerWidth) ? d1 : d2
 export const color    = { LINK:'#61DAFB', REACT:'#61DAFB', 0:'#060606', 1:'#0C0C0C', 2:'#131313', 3:'#191919', 4:'#1F1F1F', 5:'#252525', 6:'#2B2B2B', 7:'#323232', 8:'#373737', 9:'#3D3D3D', A:'#333', B:'#555' }
 
-export const threedee = (light, dark, width = 1) =>
+export const threedee = (light = '#555', dark = '#111', width = 1) =>
 { 
   return { borderWidth:width, borderStyle:'solid', borderLeftColor:light, borderTopColor:light, borderBottomColor:dark, borderRightColor:dark, borderRadius:9 }
 }
@@ -46,21 +46,12 @@ const Title = ({ title, subtitle, favicon }) =>
       </div>
   </div>
 
-const RevTitle = ({ title, subtitle, flag }) =>
-  <div style={{ display:'flex', flexDirection:'column' }}>
-    <div style={{ display:'flex', textAlign:'left', fontSize:'110%', whiteSpace:'nowrap', opacity:1.0, marginBottom:2 }}>{ title }</div>
-    <div style={{ display:'flex', flexDirection:'row' }}>
-      <img  alt={ title } src={ require('./assets/flags/' + flag + '.svg') } style={{ width:23, height:23, marginRight:9 }} />
-      <div style={{ display:'flex', textAlign:'left', fontSize:'105%', whiteSpace:'nowrap', opacity:0.6 }}>{ subtitle }</div>
-    </div>
-  </div>
-
 const Between = ({ start, end }) => start ?
     <div style={{ display:'flex', textAlign:'right', whiteSpace:'nowrap', marginBottom:5 }}>
         { start } - { end || 'Current' }
     </div> : null
 
-const OnDate = ({ onedate }) => onedate ?
+export const OnDate = ({ onedate }) => onedate ?
     <div style={{ display:'flex', textAlign:'right', whiteSpace:'nowrap', marginBottom:5 }}>
         { onedate }
     </div> : null
@@ -68,8 +59,8 @@ const OnDate = ({ onedate }) => onedate ?
 // ---------------------------------------------------------------------------------------------------
 
 const padding = '2%'
-const hdraux = { display:'flex', flexDirection:'row', justifyContent:'space-between', padding, marginTop:'4%', backgroundColor:color.A }
-const hdrcss = { ...threedee('#444', '#111'), ...hdraux }
+const hdraux  = { display:'flex', flexDirection:'row', justifyContent:'space-between', padding, marginTop:'4%', backgroundColor:color.A }
+export const hdrcss = { ...threedee(), ...hdraux }
 
 export const Header = ({ title, subtitle = '', favicon, start, end, certificate, checkout }) =>
     <div style={ hdrcss }>
@@ -78,15 +69,6 @@ export const Header = ({ title, subtitle = '', favicon, start, end, certificate,
             <Between start={ start } end={ end } />
             <Certificate file={ certificate } />
             <CheckOut url={ checkout } />
-        </div>
-    </div>
-
-export const RevHeader = ({ title, subtitle, flag, onedate }) =>
-    <div style={ hdrcss }>
-        <RevTitle title={ title } subtitle={ subtitle } flag={ flag }/>
-        <div style={{ textAlign:'right' }}>
-            <OnDate onedate={ onedate } />
-            <CheckOut url='https://www.upwork.com/freelancers/~01a7f98bc0f8942450' />
         </div>
     </div>
 
@@ -111,28 +93,23 @@ export const Separator = () =>
 
 export const Anchor = ({ onClick, children, style = undefined }) =>
 {
-  const onClickAux = () =>
-  {
-    onClick();
-    return false;
-  }
-
+  const onClickAux = () => { onClick(); return false; }
   return <a href='#' onClick={ onClickAux } style={ style }>{ children }</a>
 }
 
 // ---------------------------------------------------------------------------------------------------
 
-export const GoTo = ({ text, url }) => 
+export const GoTo = ({ text, url, style={} }) => 
 {
   const openInNewTab = url => window.open(url, '_blank', 'noreferrer')
 
   return (
-    <Anchor onClick={ () => openInNewTab(url) } style={{ color:color.LINK }}>
+    <Anchor onClick={ () => openInNewTab(url) } style={{ color:color.LINK , ...style }}>
       { text }
     </Anchor>)
 }
 
-const CheckOut = ({ url }) =>
+export const CheckOut = ({ url }) =>
 {
   const openInNewTab = () => window.open(url, '_blank', 'noreferrer')
 

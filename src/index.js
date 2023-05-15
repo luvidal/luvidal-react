@@ -12,7 +12,7 @@ const App =
   <StrictMode>
       <Header style={{ display:'flex', flexShrink:0 }}/>
       <ModalProvider>
-        <Main   style={{ display:'flex', flexGrowth:1, flexDirection:portrait('column','row'), overflow:'hidden', height:'100%' }}/>
+        <Main style={{ display:'flex', flexGrowth:1, flexDirection:portrait('column','row'), overflow:'hidden', height:'100%' }}/>
       </ModalProvider>
       { portrait(<Footer style={{ display:'flex', flexShrink:0 }}/>, null) }
   </StrictMode>

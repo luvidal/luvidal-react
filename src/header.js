@@ -10,7 +10,7 @@ import { threedee, portrait } from './_common'
 const headercss = {flexDirection:'row', display:'flex', justifyContent:'space-between', padding:portrait('3%', '1.5%'), backgroundColor:'#330000', borderRadius:0 }
 
 const Header = ({ style }) => 
-  <div style={{ ...threedee('#322', '#100', 1), ...headercss, ...style }}>
+  <div style={{ ...threedee(), ...headercss, ...style }}>
     <DeveloperInfo/>
     <ContactLinks/>
   </div>
