@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 import Summary from './page-summary'
-import Portfolio from './page-portfolio'
+import Mocks from './page-mocks'
 import History from './page-history'
 import Education from './page-education'
 import Links from './page-links'
@@ -15,7 +15,7 @@ import Reviews from './page-reviews'
 export const menu =
 [
   { id:'summary', text:'Summary', icon:solid('scroll'), content:Summary },
-  { id:'portfolio', text:'Portfolio', icon:solid('briefcase'), content:Portfolio },
+  { id:'mocks', text:'Mocks', icon:solid('briefcase'), content:Mocks },
   { id:'history', text:'History', icon:solid('book'), content:History },
   { id:'education', text:'Education', icon:solid('graduation-cap'), content:Education },
   { id:'links',   text:'Links', icon:solid('globe'), content:Links },
@@ -62,13 +62,13 @@ const padding = '2%'
 const hdraux  = { display:'flex', flexDirection:'row', justifyContent:'space-between', padding, marginTop:'4%', backgroundColor:color.A }
 export const hdrcss = { ...threedee(), ...hdraux }
 
-export const Header = ({ title, subtitle = '', favicon, start, end, certificate, checkout }) =>
+export const Header = ({ title, subtitle = '', favicon, start, end, certificate, visit }) =>
     <div style={ hdrcss }>
         <Title title={ title } subtitle={ subtitle } favicon={ favicon }/>
         <div style={{ textAlign:'right' }}>
             <Between start={ start } end={ end } />
             <Certificate file={ certificate } />
-            <CheckOut url={ checkout } />
+            <Visit url={ visit } />
         </div>
     </div>
 
@@ -109,14 +109,14 @@ export const GoTo = ({ text, url, style={} }) =>
     </Anchor>)
 }
 
-export const CheckOut = ({ url }) =>
+export const Visit = ({ url }) =>
 {
   const openInNewTab = () => window.open(url, '_blank', 'noreferrer')
 
   return url ?
     <Anchor onClick={ openInNewTab } style={{ color:color.LINK, whiteSpace:'nowrap', fontSize:'90%' }}>
-      <FontAwesomeIcon icon={ solid('eye') } style={{ marginRight:8, fontSize:'85%' }} />
-      Website
+      <FontAwesomeIcon icon={ solid('arrow-up-right-from-square') } style={{ marginRight:8, fontSize:'85%' }} />
+      Visit Site
     </Anchor> : null
 }
 

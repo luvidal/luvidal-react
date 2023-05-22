@@ -7,10 +7,17 @@ import { threedee, portrait } from './_common'
 
 // ---------------------------------------------------------------------------------------------------
 
-const headercss = {flexDirection:'row', display:'flex', justifyContent:'space-between', padding:portrait('3%', '1.5%'), backgroundColor:'#330000', borderRadius:0 }
+const border     = { ...threedee(), ...{ padding:portrait('3%', '1.5%'), borderRadius:0 }}
+const container  = { flexDirection:'row', display:'flex', justifyContent:'space-between' }
+const background = { background:'linear-gradient(to right,#200, #400, #300)' }
+
+//const textshadow = { textShadowColor:'rgba(0, 0, 0, 0.8)', textShadowOffset:{ width:10, height:10 }, textShadowRadius:3 }
+const textshadow = {}
+
+console.log({ ...textshadow, ...{ fontSize:'105%', whiteSpace:'nowrap', opacity:0.5 } });
 
 const Header = ({ style }) => 
-  <div style={{ ...threedee(), ...headercss, ...style }}>
+  <div style={{ ...container, ...background, ...border, ...style }}>
     <DeveloperInfo/>
     <ContactLinks/>
   </div>
@@ -19,10 +26,10 @@ export default Header;
 
 const DeveloperInfo = () =>
   <div style={{ display:'flex', flexDirection:'row' }}>
-    <img src={ mypic } width={ portrait('40', '60') } height={ portrait('40', '60') } alt='Luis Vidal DB'/>
+    <img src={ mypic } width={ portrait('40', '60') } height={ portrait('40', '52') } alt='Luis Vidal DB'/>
     <div style={{ display:'flex', flexDirection:'column', marginLeft:'3%'}}>
-      <div style={{ fontSize:'150%', whiteSpace:'nowrap', opacity:0.9 }}>Luis Vidal DB</div>
-      <div style={{ fontSize:'105%', whiteSpace:'nowrap', opacity:0.5 }}>Full-Stack Engineer</div>
+      <div style={{ ...textshadow, ...{ fontSize:'150%', whiteSpace:'nowrap', opacity:0.9 } }}>Luis Vidal DB</div>
+      <div style={{ ...textshadow, ...{ fontSize:'105%', whiteSpace:'nowrap', opacity:0.5 } }}>Full-Stack Engineer</div>
     </div>
   </div>
 
