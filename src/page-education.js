@@ -8,14 +8,28 @@ const Page = () =>
         <br/>
         Using mobile devices such as <GoTo text='Pocket PCs' url={ url.pocket }/>, I was instructed to develop a math-learning game for children. We intended to use Bluetooth for their communications, but it was unreliable at the time, so Wi-Fi was used instead.<br/>
     </Body>
-    <Header title='Industrial Engineer' subtitle='Pontificia Universidad Católica' favicon='puc.png' start='1994' end='2000' certificate='engineer.jpeg'/> 
-    <Body>
-        My university is very strict and demanding, and <GoTo text='it is ranked first' url={ url.topone }/> in Latin America as of 2022. Furthermore, six years of study are required for industrial engineering. During that time, I worked as an assistant to <GoTo text='Prof. Eterovic' url={ url.yadran }/>. I eventually became a professor and taught the <GoTo text='data structures' url={ url.dtstrc }/> course.
-    </Body>
+
     <Header title='Computer Science Minor' subtitle='Pontificia Universidad Católica' favicon='puc.png' start='1994' end='2000' certificate='minorcomputersc.jpeg'/> 
     <Body>
-        After concentrating my curriculum on all the computer subjects that had peaked my attention ever since I was very young, I completed a minor in computer science.<br/> 
+        Technology have significantly piqued my interest since I was a little child, thus I minored in computer science. As a result of my academic excellence there, I was granted the honor and the privilege of serving as Head Assistant to eminent computer scientists like <GoTo text='Prof. Piquer' url={ url.piquer }/> and <GoTo text='Prof. Eterovic' url={ url.yadran }/>.<br/>
+        <br/>
+        Some of the most significant courses I tought as an Instructor include&nbsp;
+        <GoTo text='Introduction to Computer Applications' url={ url.IIC1062 }/>,&nbsp;
+        <GoTo text='Advanced Computer Programming' url={ url.IIC2233 }/>,&nbsp;
+        <GoTo text='Operating Systems and Networks' url={ url.IIC2333 }/>, and&nbsp; 
+        <GoTo text='Data Structures and Algorithms' url={ url.IIC2133 }/> among others.<br/>
+        <br/>
+        A couple of years later, after completing my Master's degree, I dictated <GoTo text='Data Structures and Algorithms' url={ url.IIC2133 }/> and <GoTo text='Software Development' url={ url.IIC3143 }/> <Sup>[*]</Sup>, as an Associate Professor.<br/>
+        <br/>
+        <br/>
+        <div style={{ opacity:0.5 }}><Sup>[*]</Sup> <span style={{ fontSize:'80%' }}>Unfortunately, due to the pandemic, this course was canceled halfway through.</span></div>
     </Body>
+
+    <Header title='Industrial Engineer' subtitle='Pontificia Universidad Católica' favicon='puc.png' start='1994' end='2000' certificate='engineer.jpeg'/> 
+    <Body>
+        As an Industrial Engineer, I have also studied Logistics, Marketing, and Economics at Pontificia Universidad Católica. This university <GoTo text='is ranked first' url={ url.topone }/> in Latin America as of 2022. Furthermore, six years of study were required for becoming an engineer at the time when I went there.
+    </Body>
+
     <Header title='Bachelor in Science' subtitle='Pontificia Universidad Católica' favicon='puc.png' start='1994' end='1997' certificate=''/> 
     <Body>
         This bachelor's degree is part of my university's engineering program. It covers topics such as physics, chemistry, and advanced mathematics.
@@ -49,10 +63,20 @@ export default Page;
 
 const url =
 {
-    miguel : 'https://www.ing.uc.cl/academicos-e-investigadores/miguel-nussbaum-voehl/',
+    miguel : 'https://www.ing.uc.cl/en/academicos-e-investigadores/miguel-nussbaum-voehl/',
+    yadran : 'https://www.ing.uc.cl/en/academicos-e-investigadores/yadran-francisco-eterovic-solano/',
+    piquer : 'https://www.uchile.cl/presentacion/senado-universitario/integrantes/periodo-2006-2010/prof-jose-miguel-piquer-gardner',
+
+    sybase : 'https://en.wikipedia.org/wiki/Adaptive_Server_Enterprise',
     pocket : 'https://news.microsoft.com/2000/04/19/microsoft-releases-next-generation-pda-the-pocket-pc/',
     topone : 'https://www.topuniversities.com/university-rankings/latin-american-university-rankings/2022',
-    yadran : 'https://www.ing.uc.cl/en/academicos-e-investigadores/yadran-francisco-eterovic-solano/',
-    dtstrc : 'https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo&view=programa&sigla=IIC2133',
-    sybase : 'https://en.wikipedia.org/wiki/Adaptive_Server_Enterprise',
+
+    IIC1062 : 'https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo&view=programa&sigla=IIC1062', // introducción
+    IIC2233 : 'https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo&view=programa&sigla=IIC2233', // progrmación avanzada
+    IIC2333 : 'https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo&view=programa&sigla=IIC2333', // sistemas operativos
+    IIC2133 : 'https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo&view=programa&sigla=IIC2133', // estructuras de datos
+    IIC3143 : 'https://catalogo.uc.cl/index.php?tmpl=component&option=com_catalogo&view=programa&sigla=IIC3143', // desarrollo de software
 }
+
+const Sup = ({ children }) =>
+    <span style={{ fontSize:'90%' }}>{ children }</span>
