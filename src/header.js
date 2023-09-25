@@ -29,7 +29,7 @@ const DeveloperInfo = () =>
     <img src={ mypic } width={ portrait('40', '60') } height={ portrait('40', '52') } alt='Luis Vidal DB'/>
     <div style={{ display:'flex', flexDirection:'column', marginLeft:'3%'}}>
       <div style={{ ...textshadow, ...{ fontSize:'150%', whiteSpace:'nowrap', opacity:0.9 } }}>Luis Vidal DB</div>
-      <div style={{ ...textshadow, ...{ fontSize:'105%', whiteSpace:'nowrap', opacity:0.5 } }}>Full-Stack Engineer</div>
+      <div style={{ ...textshadow, ...{ fontSize:'105%', whiteSpace:'nowrap', opacity:0.5 } }}>Startup Engineer</div>
     </div>
   </div>
 

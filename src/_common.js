@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 import Summary from './page-summary'
-import Mocks from './page-mocks'
+import Demos from './page-demos'
 import History from './page-history'
 import Education from './page-education'
 import Links from './page-links'
@@ -15,9 +15,9 @@ import Reviews from './page-reviews'
 export const menu =
 [
   { id:'summary', text:'Summary', icon:solid('scroll'), content:Summary },
-  { id:'mocks', text:'Mocks', icon:solid('briefcase'), content:Mocks },
   { id:'history', text:'History', icon:solid('book'), content:History },
   { id:'education', text:'Education', icon:solid('graduation-cap'), content:Education },
+  { id:'demos', text:'Demos', icon:solid('briefcase'), content:Demos },
   { id:'links',   text:'Links', icon:solid('globe'), content:Links },
   { id:'reviews', text:'Reviews', icon:solid('message'), content:Reviews },
   // { id:'hobbies', text:'Hobbies', icon:solid('masks-theater'), content:Hobbies },
@@ -116,7 +116,7 @@ export const Visit = ({ url }) =>
   return url ?
     <Anchor onClick={ openInNewTab } style={{ color:color.LINK, whiteSpace:'nowrap', fontSize:'90%' }}>
       <FontAwesomeIcon icon={ solid('arrow-up-right-from-square') } style={{ marginRight:8, fontSize:'85%' }} />
-      Visit Site
+      Open
     </Anchor> : null
 }
 

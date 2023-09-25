@@ -17,7 +17,7 @@ const Page = () =>
     </Body>
     <Header title='LinkedIn' subtitle='Contact Network' favicon='linkedin.png' visit='https://www.linkedin.com/in/luvidaldb/'/> 
     <Body>
-        My LinkedIn acquaintances include individuals with whom I have studied or built real-world teams. I keep my social networks as small as possible because I don't believe in following the careers of people I don't know.<br/>
+        My LinkedIn contacts include individuals with whom I have worked, studied or built real-world teams.<br/>
         <br />
         <GoTo text='LinkedIn' url='https://en.wikipedia.org/wiki/LinkedIn' /> is used for professional networking and career development, and allows job seekers to post their CVs and employers to post jobs. It is now a subsidiary of Microsoft, with 830+ million registered members from over 200 countries and territories.<br />
     </Body>
